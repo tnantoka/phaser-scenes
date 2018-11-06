@@ -1,3 +1,6 @@
+import LoadingScene from './scenes/LoadingScene';
+import GameScene from './scenes/GameScene';
+
 const config = {
   type: Phaser.AUTO,
   width: 800,
@@ -8,10 +11,7 @@ const config = {
       gravity: { y: 200 }
     }
   },
-  scene: {
-    preload,
-    create
-  }
+  scene: [LoadingScene, GameScene],
 };
 
 const game = new Phaser.Game(config);
